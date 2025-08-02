@@ -2249,24 +2249,12 @@
             document.getElementById('questModal').classList.add('hidden');
         }
         
-        // Add touch event handlers for mobile buttons
+        // Add event handlers for buttons
         document.addEventListener('DOMContentLoaded', function() {
             // Continue Quest Button
             const continueBtn = document.getElementById('continueQuestBtn');
             if (continueBtn) {
-                continueBtn.addEventListener('touchstart', function(e) {
-                    e.preventDefault();
-                    this.style.transform = 'scale(0.95)';
-                });
-                
-                continueBtn.addEventListener('touchend', function(e) {
-                    e.preventDefault();
-                    this.style.transform = 'scale(1)';
-                    closeQuest();
-                });
-                
-                continueBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
+                continueBtn.addEventListener('click', function() {
                     closeQuest();
                 });
             }
@@ -2274,19 +2262,7 @@
             // Register Button
             const registerBtn = document.getElementById('registerBtn');
             if (registerBtn) {
-                registerBtn.addEventListener('touchstart', function(e) {
-                    e.preventDefault();
-                    this.style.transform = 'scale(0.95)';
-                });
-                
-                registerBtn.addEventListener('touchend', function(e) {
-                    e.preventDefault();
-                    this.style.transform = 'scale(1)';
-                    registerAsAdventurer();
-                });
-                
-                registerBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
+                registerBtn.addEventListener('click', function() {
                     registerAsAdventurer();
                 });
             }
@@ -2383,13 +2359,19 @@
             }
         });
         
-        // Mobile touch support for movement buttons
+        // Mobile touch support - only prevent for specific elements
         document.addEventListener('touchstart', function(e) {
-            e.preventDefault(); // Prevent default touch behavior
+            // Only prevent default for movement buttons, not all touches
+            if (e.target.id === 'forwardBtn' || e.target.id === 'backwardBtn') {
+                e.preventDefault();
+            }
         }, { passive: false });
         
         document.addEventListener('touchend', function(e) {
-            e.preventDefault(); // Prevent default touch behavior
+            // Only prevent default for movement buttons, not all touches
+            if (e.target.id === 'forwardBtn' || e.target.id === 'backwardBtn') {
+                e.preventDefault();
+            }
         }, { passive: false });
         
         // Prevent zoom on double tap for mobile
@@ -2402,55 +2384,60 @@
             lastTouchEnd = now;
         }, false);
         
-        // Swipe gestures for mobile movement
+        // Swipe gestures for mobile movement - only on game area
         let touchStartX = 0;
         let touchStartY = 0;
         let isSwiping = false;
         
-        document.addEventListener('touchstart', function(e) {
-            if (document.getElementById('kingdomExploration').classList.contains('hidden') === false) {
-                touchStartX = e.touches[0].clientX;
-                touchStartY = e.touches[0].clientY;
-                isSwiping = false;
-            }
-        });
+        const gameArea = document.getElementById('kingdomExploration');
         
-        document.addEventListener('touchmove', function(e) {
-            if (document.getElementById('kingdomExploration').classList.contains('hidden') === false) {
-                if (!touchStartX || !touchStartY) return;
-                
-                const touchEndX = e.touches[0].clientX;
-                const touchEndY = e.touches[0].clientY;
-                
-                const diffX = touchStartX - touchEndX;
-                const diffY = touchStartY - touchEndY;
-                
-                // Only trigger if horizontal swipe is more significant than vertical
-                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                    if (!isSwiping && !isMoving) {
-                        isSwiping = true;
-                        if (diffX > 0) {
-                            // Swipe left - move backward
-                            startMoving('backward');
-                        } else {
-                            // Swipe right - move forward
-                            startMoving('forward');
+        if (gameArea) {
+            gameArea.addEventListener('touchstart', function(e) {
+                if (!this.classList.contains('hidden')) {
+                    // Only start swipe if not touching buttons or modals
+                    if (!e.target.closest('button') && !e.target.closest('#questModal')) {
+                        touchStartX = e.touches[0].clientX;
+                        touchStartY = e.touches[0].clientY;
+                        isSwiping = false;
+                    }
+                }
+            });
+            
+            gameArea.addEventListener('touchmove', function(e) {
+                if (!this.classList.contains('hidden') && touchStartX && touchStartY) {
+                    const touchEndX = e.touches[0].clientX;
+                    const touchEndY = e.touches[0].clientY;
+                    
+                    const diffX = touchStartX - touchEndX;
+                    const diffY = touchStartY - touchEndY;
+                    
+                    // Only trigger if horizontal swipe is more significant than vertical
+                    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                        if (!isSwiping && !isMoving) {
+                            isSwiping = true;
+                            if (diffX > 0) {
+                                // Swipe left - move backward
+                                startMoving('backward');
+                            } else {
+                                // Swipe right - move forward
+                                startMoving('forward');
+                            }
                         }
                     }
                 }
-            }
-        });
-        
-        document.addEventListener('touchend', function(e) {
-            if (document.getElementById('kingdomExploration').classList.contains('hidden') === false) {
-                if (isSwiping) {
-                    stopMoving();
-                    isSwiping = false;
+            });
+            
+            gameArea.addEventListener('touchend', function(e) {
+                if (!this.classList.contains('hidden')) {
+                    if (isSwiping) {
+                        stopMoving();
+                        isSwiping = false;
+                    }
+                    touchStartX = 0;
+                    touchStartY = 0;
                 }
-                touchStartX = 0;
-                touchStartY = 0;
-            }
-        });
+            });
+        }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'968e1eee833dff7e',t:'MTc1NDE0MzQyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'968e238bb776ff7e',t:'MTc1NDE0MzYxOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

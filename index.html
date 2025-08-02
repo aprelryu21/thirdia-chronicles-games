@@ -1704,11 +1704,11 @@
                     <div class="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">📜</div>
                     <h2 id="questTitle" class="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-yellow-400"></h2>
                     <p id="questContent" class="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed"></p>
-                    <div id="questButtons" class="space-y-2 sm:space-y-0 sm:space-x-4">
-                        <button id="continueQuestBtn" onclick="closeQuest()" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-bold hover:from-blue-500 hover:to-purple-500 transition-all text-sm sm:text-base">
+                    <div id="questButtons" class="space-y-3 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+                        <button id="continueQuestBtn" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 px-6 sm:px-8 py-4 sm:py-3 rounded-lg font-bold hover:from-blue-500 hover:to-purple-500 active:from-blue-700 active:to-purple-700 transition-all text-sm sm:text-base min-h-[48px] touch-manipulation select-none cursor-pointer">
                             Lanjutkan Petualangan 🚀
                         </button>
-                        <button id="registerBtn" onclick="registerAsAdventurer()" class="w-full sm:w-auto bg-gradient-to-r from-green-600 to-emerald-600 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-bold hover:from-green-500 hover:to-emerald-500 transition-all hidden text-sm sm:text-base">
+                        <button id="registerBtn" class="w-full sm:w-auto bg-gradient-to-r from-green-600 to-emerald-600 px-6 sm:px-8 py-4 sm:py-3 rounded-lg font-bold hover:from-green-500 hover:to-emerald-500 active:from-green-700 active:to-emerald-700 transition-all hidden text-sm sm:text-base min-h-[48px] touch-manipulation select-none cursor-pointer">
                             🎯 DAFTAR SEBAGAI PETUALANG
                         </button>
                     </div>
@@ -2249,6 +2249,49 @@
             document.getElementById('questModal').classList.add('hidden');
         }
         
+        // Add touch event handlers for mobile buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Continue Quest Button
+            const continueBtn = document.getElementById('continueQuestBtn');
+            if (continueBtn) {
+                continueBtn.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                continueBtn.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    this.style.transform = 'scale(1)';
+                    closeQuest();
+                });
+                
+                continueBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    closeQuest();
+                });
+            }
+            
+            // Register Button
+            const registerBtn = document.getElementById('registerBtn');
+            if (registerBtn) {
+                registerBtn.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                registerBtn.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    this.style.transform = 'scale(1)';
+                    registerAsAdventurer();
+                });
+                
+                registerBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    registerAsAdventurer();
+                });
+            }
+        });
+        
         // Fullscreen functionality
         function toggleFullscreen() {
             if (!document.fullscreenElement) {
@@ -2409,5 +2452,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'968e00d9e145899b',t:'MTc1NDE0MjE5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'968e1eee833dff7e',t:'MTc1NDE0MzQyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

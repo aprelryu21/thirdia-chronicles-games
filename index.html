@@ -300,7 +300,18 @@
         }
     </style>
 </head>
-<body class="min-h-screen text-white">
+<body
+
+<audio id="bgMusic" autoplay loop>
+    <source src="ost.mp3" type="audio/mpeg">
+</audio>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var music = document.getElementById('bgMusic');
+    music.volume = 0.5;
+});
+</script>
+ class="min-h-screen text-white">
     <!-- Animated Stars Background -->
     <div class="stars" id="stars"></div>
     
@@ -951,6 +962,13 @@
                 <button id="confirmBtn" class="confirm-btn px-8 sm:px-10 md:px-12 py-3 sm:py-4 rounded-xl text-lg sm:text-xl font-bold text-white shadow-lg hidden w-full sm:w-auto" onclick="confirmSelection()">
                     🚀 MULAI PETUALANGAN
                 </button>
+
+
+<script>
+function skipTutorial(){
+    window.location.href = 'game.html?role=' + encodeURIComponent(selectedRole);
+}
+</script>
             </div>
         </div>
         
@@ -973,6 +991,13 @@
                 <button onclick="saveAsImageAndClose()" class="bg-gradient-to-r from-green-600 to-emerald-600 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-bold hover:from-green-500 hover:to-emerald-500 transition-all text-sm sm:text-base">
                     Siap Bertualang! 🎮
                 </button>
+
+
+<script>
+function skipTutorial(){
+    window.location.href = 'game.html?role=' + encodeURIComponent(selectedRole);
+}
+</script>
             </div>
         </div>
         
@@ -2885,7 +2910,7 @@
                     player.canDoubleJump = true;
                 } else if (player.canDoubleJump) {
                     // Double jump - shorter jump (75% of first jump)
-                    player.velocityY = -player.jumpPower * 1;
+                    player.velocityY = -player.jumpPower *0.90;
                     player.canDoubleJump = false;
                 }
                 player.jumpPressed = true;
@@ -3772,16 +3797,16 @@
                 
                 // Add crown
                 ctx.fillStyle = '#FFD700';
-                ctx.fillRect(screenX + 5, screenY - 5, player.width * 0.75, 8);
+                ctx.fillRect(screenX + 5, screenY - 5, player.width *0.90, 8);
                 
                 // Crown points
                 ctx.fillRect(screenX + 8, screenY - 10, 4, 5);
                 ctx.fillRect(screenX + player.width * 0.5, screenY - 12, 4, 7);
-                ctx.fillRect(screenX + player.width * 0.75, screenY - 10, 4, 5);
+                ctx.fillRect(screenX + player.width *0.90, screenY - 10, 4, 5);
                 
                 // Face
                 ctx.fillStyle = '#fdbcbc';
-                ctx.fillRect(screenX + 5, screenY + 5, player.width * 0.75, player.height * 0.6);
+                ctx.fillRect(screenX + 5, screenY + 5, player.width *0.90, player.height * 0.6);
                 
                 // Beard
                 ctx.fillStyle = '#E6E6E6';
@@ -3803,7 +3828,7 @@
                 
                 // Add simple face
                 ctx.fillStyle = '#fdbcbc';
-                ctx.fillRect(screenX + 5, screenY + 5, player.width * 0.75, player.height * 0.6);
+                ctx.fillRect(screenX + 5, screenY + 5, player.width *0.90, player.height * 0.6);
                 
                 // Eyes
                 ctx.fillStyle = '#000000';
@@ -4500,4 +4525,3 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f5266d23978104',t:'MTc1NTIyMzc2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-

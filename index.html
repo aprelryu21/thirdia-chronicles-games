@@ -976,6 +976,119 @@
             </div>
         </div>
         
+        <!-- Level Selector Page (King Only) -->
+        <div id="levelSelector" class="hidden min-h-screen relative overflow-hidden bg-gradient-to-b from-purple-900 via-blue-900 to-indigo-900">
+            <div class="container mx-auto px-4 py-8">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="game-title text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+                        👑 RAJA THIRDIA
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-4">Pilih Level Yang Ingin Dimainkan</p>
+                    <div class="w-32 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto rounded-full"></div>
+                </div>
+                
+                <!-- Level Cards Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-8">
+                    <!-- Level 1 -->
+                    <div class="level-card bg-gradient-to-br from-green-600 to-green-800 p-4 md:p-6 rounded-xl border-2 border-green-400 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(1)">
+                        <div class="text-3xl md:text-4xl mb-2">🌅</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 1</h3>
+                        <p class="text-sm text-green-200">Morning</p>
+                        <p class="text-xs text-green-300 mt-1">Slime Enemies</p>
+                    </div>
+                    
+                    <!-- Level 2 -->
+                    <div class="level-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 md:p-6 rounded-xl border-2 border-blue-300 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(2)">
+                        <div class="text-3xl md:text-4xl mb-2">☀️</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 2</h3>
+                        <p class="text-sm text-blue-200">Day</p>
+                        <p class="text-xs text-blue-300 mt-1">Slime Enemies</p>
+                    </div>
+                    
+                    <!-- Level 3 -->
+                    <div class="level-card bg-gradient-to-br from-orange-500 to-orange-700 p-4 md:p-6 rounded-xl border-2 border-orange-300 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(3)">
+                        <div class="text-3xl md:text-4xl mb-2">🌇</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 3</h3>
+                        <p class="text-sm text-orange-200">Afternoon</p>
+                        <p class="text-xs text-orange-300 mt-1">Slime Enemies</p>
+                    </div>
+                    
+                    <!-- Level 4 -->
+                    <div class="level-card bg-gradient-to-br from-red-600 to-red-800 p-4 md:p-6 rounded-xl border-2 border-red-400 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(4)">
+                        <div class="text-3xl md:text-4xl mb-2">🌆</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 4</h3>
+                        <p class="text-sm text-red-200">Evening</p>
+                        <p class="text-xs text-red-300 mt-1">Wolf Enemies</p>
+                    </div>
+                    
+                    <!-- Level 5 -->
+                    <div class="level-card bg-gradient-to-br from-purple-600 to-purple-800 p-4 md:p-6 rounded-xl border-2 border-purple-400 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(5)">
+                        <div class="text-3xl md:text-4xl mb-2">🌃</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 5</h3>
+                        <p class="text-sm text-purple-200">Dusk</p>
+                        <p class="text-xs text-purple-300 mt-1">Wolf Enemies</p>
+                    </div>
+                    
+                    <!-- Level 6 -->
+                    <div class="level-card bg-gradient-to-br from-indigo-700 to-indigo-900 p-4 md:p-6 rounded-xl border-2 border-indigo-500 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(6)">
+                        <div class="text-3xl md:text-4xl mb-2">🌙</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 6</h3>
+                        <p class="text-sm text-indigo-200">Night</p>
+                        <p class="text-xs text-indigo-300 mt-1">Wolf Enemies</p>
+                    </div>
+                    
+                    <!-- Level 7 -->
+                    <div class="level-card bg-gradient-to-br from-gray-800 to-black p-4 md:p-6 rounded-xl border-2 border-gray-600 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(7)">
+                        <div class="text-3xl md:text-4xl mb-2">🌚</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 7</h3>
+                        <p class="text-sm text-gray-300">Midnight</p>
+                        <p class="text-xs text-gray-400 mt-1">Goblin Enemies</p>
+                    </div>
+                    
+                    <!-- Level 8 -->
+                    <div class="level-card bg-gradient-to-br from-gray-900 to-black p-4 md:p-6 rounded-xl border-2 border-gray-700 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(8)">
+                        <div class="text-3xl md:text-4xl mb-2">🌑</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 8</h3>
+                        <p class="text-sm text-gray-300">Late Night</p>
+                        <p class="text-xs text-gray-400 mt-1">Goblin Enemies</p>
+                    </div>
+                    
+                    <!-- Level 9 -->
+                    <div class="level-card bg-gradient-to-br from-pink-600 to-purple-700 p-4 md:p-6 rounded-xl border-2 border-pink-400 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(9)">
+                        <div class="text-3xl md:text-4xl mb-2">🌄</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 9</h3>
+                        <p class="text-sm text-pink-200">Dawn</p>
+                        <p class="text-xs text-pink-300 mt-1">Goblin Enemies</p>
+                    </div>
+                    
+                    <!-- Level 10 (Boss) -->
+                    <div class="level-card bg-gradient-to-br from-red-800 to-red-900 p-4 md:p-6 rounded-xl border-2 border-red-500 cursor-pointer hover:scale-105 transition-all duration-300 text-center" onclick="selectLevel(10)">
+                        <div class="text-3xl md:text-4xl mb-2">👹</div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2">Level 10</h3>
+                        <p class="text-sm text-red-200">BOSS</p>
+                        <p class="text-xs text-red-300 mt-1">Orc Enemies</p>
+                    </div>
+                </div>
+                
+                <!-- Selected Level Display -->
+                <div id="selectedLevelDisplay" class="text-center mb-6 hidden">
+                    <div class="bg-gradient-to-r from-yellow-800 to-orange-800 p-6 rounded-xl border-2 border-yellow-400">
+                        <h3 class="text-2xl font-bold mb-2 text-yellow-400">Level Terpilih:</h3>
+                        <p id="selectedLevelName" class="text-3xl font-bold text-white"></p>
+                        <p class="text-gray-300 mt-2">Siap memulai petualangan di level ini?</p>
+                    </div>
+                </div>
+                
+                <!-- Start Button -->
+                <div class="text-center">
+                    <button id="startSelectedLevelBtn" class="bg-gradient-to-r from-green-600 to-emerald-600 px-12 py-4 rounded-xl text-xl font-bold text-white shadow-lg hidden hover:from-green-500 hover:to-emerald-500 transition-all" onclick="startSelectedLevel()">
+                        👑 MULAI LEVEL
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- Platformer Game Page -->
         <div id="platformerGame" class="hidden min-h-screen relative overflow-hidden bg-gradient-to-b from-green-400 via-green-500 to-green-800">
             <!-- Game Canvas -->
@@ -2081,7 +2194,7 @@
         let isMoving = false;
         let totalDistance = 0;
         let questTriggers = [];
-        let movementSpeed = 3; // Pixels per frame
+        let movementSpeed = 1.5; // Pixels per frame - diperlambat
         let completedQuests = 0;
         
         const quests = [
@@ -2480,9 +2593,9 @@
             height: 32,
             velocityX: 0,
             velocityY: 0,
-            speed: 2.5, // Increased speed for better gameplay
-            acceleration: 0.15, // Faster acceleration
-            deceleration: 0.18, // Faster deceleration
+            speed: 1.8, // Diperlambat untuk gerakan yang lebih halus
+            acceleration: 0.08, // Akselerasi lebih halus
+            deceleration: 0.12, // Deselerasi lebih halus
             jumpPower: 15,
             onGround: false,
             lives: 5,
@@ -2550,14 +2663,17 @@
             document.getElementById('platformerPlayerInfo').innerHTML = 
                 `${genderIcon} ${playerName}<br><span class="text-green-400">${selectedRoleName}</span><br><span class="text-yellow-400">Level ${currentLevel}</span>`;
             
+            // Set ground level first
+            groundLevel = canvas.height - 40;
+            
             // Reset game state
             player.x = 100;
-            player.y = 300;
+            player.y = groundLevel - player.height;
             player.velocityX = 0;
             player.velocityY = 0;
             player.lives = 5;
             player.score = 0;
-            player.onGround = false;
+            player.onGround = true;
             player.canDoubleJump = false;
             player.jumpPressed = false;
             
@@ -2589,150 +2705,121 @@
             platforms = [];
             enemies = [];
             
-            // Set ground level to bottom of screen
+            // Set ground level
             groundLevel = canvas.height - 40;
             
-            // Generate varied ground terrain that connects to screen bottom
-            let currentHeight = groundLevel;
-            let segmentWidth = 100;
-            
-            for (let x = 0; x < levelWidth; x += segmentWidth) {
-                // Randomly adjust height for terrain variation
-                if (Math.random() < 0.3) {
-                    let heightChange = (Math.random() - 0.5) * 40; // -20 to +20 pixels
-                    currentHeight = Math.max(groundLevel - 60, Math.min(groundLevel + 30, currentHeight + heightChange));
+            // Generate ground platforms with varied heights - closer spacing
+            for (let x = 0; x < levelWidth; x += 120) { // Reduced from 200 to 120
+                // Create height variation - some platforms higher, some lower
+                let heightVariation = 0;
+                if (x > 0) { // Don't vary the starting platform
+                    heightVariation = (Math.sin(x * 0.002) * 20) + (Math.random() - 0.5) * 15; // Reduced variation
                 }
                 
-                // Create ground segment that extends to bottom of screen
                 platforms.push({
                     x: x,
-                    y: currentHeight,
-                    width: segmentWidth + 5, // Slight overlap
-                    height: canvas.height - currentHeight,
-                    type: 'ground',
-                    terrainHeight: currentHeight
+                    y: groundLevel + heightVariation,
+                    width: 120, // Reduced from 200 to 120
+                    height: 40,
+                    type: 'ground'
                 });
             }
             
-            // Generate holes in the ground (Mario-style gaps) - smaller and properly positioned
-            let holePositions = [800, 1500, 2200, 2800, 3500, 4000];
-            holePositions.forEach((holeX, index) => {
-                // Smaller hole width based on player jump capability (player can jump ~120 pixels with double jump)
-                let holeWidth = 40 + Math.random() * 15; // 40-55 pixels wide (much smaller)
-                
-                // Find the exact edges of platforms to create seamless holes
-                let leftPlatform = null;
-                let rightPlatform = null;
-                
-                for (let platform of platforms) {
-                    if (platform.type === 'ground') {
-                        if (platform.x + platform.width <= holeX) {
-                            if (!leftPlatform || platform.x > leftPlatform.x) {
-                                leftPlatform = platform;
-                            }
-                        }
-                        if (platform.x >= holeX + holeWidth) {
-                            if (!rightPlatform || platform.x < rightPlatform.x) {
-                                rightPlatform = platform;
-                            }
-                        }
-                    }
-                }
+            // Generate holes in the ground - much closer spacing for easier jumping
+            let holePositions = [350, 600, 850, 1100, 1350, 1600, 1850, 2100, 2350, 2600];
+            holePositions.forEach(holeX => {
+                let holeWidth = 30 + Math.random() * 15; // 30-45 pixels wide (smaller holes)
                 
                 // Remove ground platforms in hole area
                 platforms = platforms.filter(platform => {
                     return !(platform.x < holeX + holeWidth && platform.x + platform.width > holeX);
                 });
                 
-                // Adjust hole position to connect seamlessly with platforms
-                if (leftPlatform) {
-                    holeX = leftPlatform.x + leftPlatform.width;
-                }
-                
-                // Add hole marker that extends to bottom of screen
+                // Add hole obstacle
                 obstacles.push({
                     x: holeX,
                     y: groundLevel,
                     width: holeWidth,
-                    height: canvas.height - groundLevel,
+                    height: 40,
                     type: 'hole'
                 });
-                
-                // Add small platform above some holes (50% chance)
-                if (Math.random() < 0.5) {
-                    platforms.push({
-                        x: holeX + holeWidth/4, // Center the platform over the hole
-                        y: groundLevel - 60 - Math.random() * 20, // 60-80 pixels above ground
-                        width: holeWidth/2 + 20, // Platform slightly wider than half the hole
-                        height: 15,
-                        type: 'floating'
-                    });
-                }
             });
             
-            // Generate floating platforms strategically positioned
-            for (let i = 0; i < 8; i++) {
+            // Generate floating platforms - better positioned
+            for (let i = 0; i < 15; i++) {
                 platforms.push({
-                    x: 600 + i * 500 + Math.random() * 150, // Less random spread
-                    y: groundLevel - 80 - Math.random() * 40, // Lower height (80-120 pixels above ground)
-                    width: 80 + Math.random() * 40, // Smaller platforms (80-120 pixels wide)
+                    x: 250 + i * 250 + Math.random() * 80,
+                    y: groundLevel - 50 - Math.random() * 30, // Not too high, not too low
+                    width: 80 + Math.random() * 40,
                     height: 20,
                     type: 'floating'
                 });
             }
             
-            // Generate enemies based on current level
-            let enemyPositions = [600, 1200, 1800, 2500, 3200, 3800];
+            // Generate enemies based on current level - only on solid ground
+            let enemyPositions = [480, 960, 1440, 1920, 2400, 2880, 3360, 3840, 4320]; // Adjusted for closer ground spacing
             let levelConfig = levelConfigs[currentLevel];
             
             enemyPositions.forEach(enemyX => {
-                // Find ground height at enemy position
+                // Find ground platform at enemy position
+                let groundPlatform = null;
                 let groundHeight = groundLevel;
+                
                 for (let platform of platforms) {
-                    if (platform.type === 'ground' && enemyX >= platform.x && enemyX <= platform.x + platform.width) {
+                    if (platform.type === 'ground' && 
+                        enemyX >= platform.x && 
+                        enemyX <= platform.x + platform.width) {
+                        groundPlatform = platform;
                         groundHeight = platform.y;
                         break;
                     }
                 }
                 
-                let enemySize = 24;
-                let enemySpeed = 0.3 + Math.random() * 0.4;
-                
-                // Adjust enemy properties based on type
-                switch(levelConfig.enemyType) {
-                    case 'slime':
-                        enemySize = 24;
-                        enemySpeed = 0.3 + Math.random() * 0.4;
-                        break;
-                    case 'wolf':
-                        enemySize = 28;
-                        enemySpeed = 0.5 + Math.random() * 0.3;
-                        break;
-                    case 'goblin':
-                        enemySize = 30;
-                        enemySpeed = 0.4 + Math.random() * 0.5;
-                        break;
-                    case 'orc':
-                        enemySize = 48; // 2x larger than player (32x32)
-                        enemySpeed = 0.2 + Math.random() * 0.3; // Slower but more dangerous
-                        break;
+                // Only spawn enemy if there's solid ground
+                if (groundPlatform) {
+                    let enemySize = 24;
+                    let enemySpeed = 0.3 + Math.random() * 0.4;
+                    
+                    // Adjust enemy properties based on type
+                    switch(levelConfig.enemyType) {
+                        case 'slime':
+                            enemySize = 24;
+                            enemySpeed = 0.3 + Math.random() * 0.4;
+                            break;
+                        case 'wolf':
+                            enemySize = 40;
+                            enemySpeed = 0.5 + Math.random() * 0.3;
+                            break;
+                        case 'goblin':
+                            enemySize = 30;
+                            enemySpeed = 0.4 + Math.random() * 0.5;
+                            break;
+                        case 'orc':
+                            enemySize = 48;
+                            enemySpeed = 0.2 + Math.random() * 0.3;
+                            break;
+                    }
+                    
+                    enemies.push({
+                        x: enemyX,
+                        y: groundHeight - enemySize,
+                        width: enemySize,
+                        height: enemySize,
+                        velocityX: enemySpeed,
+                        direction: Math.random() > 0.5 ? 1 : -1,
+                        type: levelConfig.enemyType,
+                        alive: true,
+                        groundY: groundHeight,
+                        moveTimer: 0,
+                        pauseTimer: 0,
+                        isMoving: true,
+                        randomFactor: Math.random() * 0.2 + 0.8,
+                        platformBounds: {
+                            left: groundPlatform.x,
+                            right: groundPlatform.x + groundPlatform.width
+                        }
+                    });
                 }
-                
-                enemies.push({
-                    x: enemyX,
-                    y: groundHeight - enemySize,
-                    width: enemySize,
-                    height: enemySize,
-                    velocityX: enemySpeed,
-                    direction: Math.random() > 0.5 ? 1 : -1,
-                    type: levelConfig.enemyType,
-                    alive: true,
-                    groundY: groundHeight,
-                    moveTimer: 0,
-                    pauseTimer: 0,
-                    isMoving: true,
-                    randomFactor: Math.random() * 0.2 + 0.8
-                });
             });
         }
         
@@ -2797,8 +2884,8 @@
                     player.onGround = false;
                     player.canDoubleJump = true;
                 } else if (player.canDoubleJump) {
-                    // Double jump - slightly higher jump
-                    player.velocityY = -player.jumpPower * 1.05;
+                    // Double jump - shorter jump (75% of first jump)
+                    player.velocityY = -player.jumpPower * 0.75;
                     player.canDoubleJump = false;
                 }
                 player.jumpPressed = true;
@@ -2824,9 +2911,13 @@
         }
         
         function updateCamera() {
-            // Follow player
-            camera.x = player.x - canvas.width / 3;
-            camera.y = Math.max(0, player.y - canvas.height / 2);
+            // Follow player with smooth camera movement
+            camera.x = player.x - canvas.width / 2;
+            camera.y = player.y - canvas.height / 2;
+            
+            // Keep camera within level bounds
+            camera.x = Math.max(0, Math.min(camera.x, levelWidth - canvas.width));
+            camera.y = Math.max(-200, Math.min(camera.y, 200));
         }
         
         function drawBackground() {
@@ -2903,46 +2994,159 @@
                 }
             }
             
-            // Draw bigger trees in background at ground level
-            for (let i = 0; i < 80; i++) {
-                const treeX = i * 200 - camera.x * 0.3;
+            // Draw detailed trees only on solid ground
+            for (let i = 0; i < 25; i++) {
+                const treeWorldX = i * 250 + 150; // Tree positions in world coordinates
+                const treeX = treeWorldX - camera.x * 0.3;
                 
-                // Find ground height at tree position
+                // Check if tree position is on solid ground (not in holes)
+                let onSolidGround = false;
                 let treeGroundY = groundLevel;
+                
                 for (let platform of platforms) {
-                    if (platform.type === 'ground' && (i * 200) >= platform.x && (i * 200) <= platform.x + platform.width) {
+                    if (platform.type === 'ground' && 
+                        treeWorldX >= platform.x && 
+                        treeWorldX <= platform.x + platform.width) {
+                        onSolidGround = true;
                         treeGroundY = platform.y;
                         break;
                     }
                 }
                 
-                const screenTreeY = treeGroundY - camera.y;
-                
-                if (treeX > -150 && treeX < canvas.width + 150) {
-                    // Tree trunk (bigger) - positioned to sit on ground
-                    ctx.fillStyle = '#8B4513';
-                    ctx.fillRect(treeX, screenTreeY - 120, 30, 120);
+                if (onSolidGround && treeX > -150 && treeX < canvas.width + 150) {
+                    const treeY = treeGroundY - camera.y;
                     
-                    // Tree leaves (much bigger)
-                    ctx.fillStyle = '#228B22';
-                    ctx.beginPath();
-                    ctx.arc(treeX + 15, screenTreeY - 140, 50, 0, Math.PI * 2);
-                    ctx.fill();
+                    // Tree size variation - much bigger trees
+                    const treeSize = 1.2 + (i % 3) * 0.5; // Size multiplier (bigger base size)
+                    const trunkWidth = 20 * treeSize;
+                    const trunkHeight = 90 * treeSize;
+                    const canopyRadius = 45 * treeSize;
                     
-                    // Additional leaf layers for fuller look
-                    ctx.fillStyle = '#32CD32';
-                    ctx.beginPath();
-                    ctx.arc(treeX + 5, screenTreeY - 130, 35, 0, Math.PI * 2);
-                    ctx.fill();
+                    // Tree type variation
+                    const treeType = i % 4;
                     
-                    ctx.beginPath();
-                    ctx.arc(treeX + 25, screenTreeY - 130, 35, 0, Math.PI * 2);
-                    ctx.fill();
+                    switch(treeType) {
+                        case 0: // Oak tree
+                            // Trunk
+                            ctx.fillStyle = '#8B4513';
+                            ctx.fillRect(treeX - trunkWidth/2, treeY - trunkHeight, trunkWidth, trunkHeight);
+                            
+                            // Trunk texture
+                            ctx.fillStyle = '#654321';
+                            for (let j = 0; j < 3; j++) {
+                                ctx.fillRect(treeX - trunkWidth/2 + 2, treeY - trunkHeight + j * 20, trunkWidth - 4, 2);
+                            }
+                            
+                            // Main canopy
+                            ctx.fillStyle = '#228B22';
+                            ctx.beginPath();
+                            ctx.arc(treeX, treeY - trunkHeight - 10, canopyRadius, 0, Math.PI * 2);
+                            ctx.fill();
+                            
+                            // Additional canopy layers
+                            ctx.fillStyle = '#32CD32';
+                            ctx.beginPath();
+                            ctx.arc(treeX - canopyRadius * 0.4, treeY - trunkHeight + 5, canopyRadius * 0.7, 0, Math.PI * 2);
+                            ctx.fill();
+                            ctx.beginPath();
+                            ctx.arc(treeX + canopyRadius * 0.4, treeY - trunkHeight + 5, canopyRadius * 0.7, 0, Math.PI * 2);
+                            ctx.fill();
+                            
+                            // Dark green details
+                            ctx.fillStyle = '#1B5E20';
+                            ctx.beginPath();
+                            ctx.arc(treeX, treeY - trunkHeight - 10, canopyRadius * 0.6, 0, Math.PI * 2);
+                            ctx.fill();
+                            break;
+                            
+                        case 1: // Pine tree
+                            // Trunk
+                            ctx.fillStyle = '#8B4513';
+                            ctx.fillRect(treeX - trunkWidth/3, treeY - trunkHeight, trunkWidth * 0.7, trunkHeight);
+                            
+                            // Pine layers (triangular)
+                            ctx.fillStyle = '#1B5E20';
+                            for (let layer = 0; layer < 4; layer++) {
+                                const layerY = treeY - trunkHeight - (layer * 15);
+                                const layerRadius = canopyRadius - (layer * 8);
+                                ctx.beginPath();
+                                ctx.moveTo(treeX, layerY - layerRadius);
+                                ctx.lineTo(treeX - layerRadius, layerY + layerRadius * 0.3);
+                                ctx.lineTo(treeX + layerRadius, layerY + layerRadius * 0.3);
+                                ctx.closePath();
+                                ctx.fill();
+                            }
+                            break;
+                            
+                        case 2: // Birch tree
+                            // White trunk with black marks
+                            ctx.fillStyle = '#F5F5F5';
+                            ctx.fillRect(treeX - trunkWidth/2, treeY - trunkHeight, trunkWidth, trunkHeight);
+                            
+                            // Black birch marks
+                            ctx.fillStyle = '#000000';
+                            for (let j = 0; j < 4; j++) {
+                                const markY = treeY - trunkHeight + j * 15 + 5;
+                                ctx.fillRect(treeX - trunkWidth/2, markY, trunkWidth, 3);
+                                ctx.fillRect(treeX - trunkWidth/4, markY - 2, trunkWidth/2, 1);
+                            }
+                            
+                            // Light green canopy
+                            ctx.fillStyle = '#90EE90';
+                            ctx.beginPath();
+                            ctx.arc(treeX, treeY - trunkHeight - 5, canopyRadius * 0.8, 0, Math.PI * 2);
+                            ctx.fill();
+                            
+                            // Darker green details
+                            ctx.fillStyle = '#32CD32';
+                            ctx.beginPath();
+                            ctx.arc(treeX, treeY - trunkHeight - 5, canopyRadius * 0.5, 0, Math.PI * 2);
+                            ctx.fill();
+                            break;
+                            
+                        case 3: // Willow tree
+                            // Trunk
+                            ctx.fillStyle = '#8B4513';
+                            ctx.fillRect(treeX - trunkWidth/2, treeY - trunkHeight, trunkWidth, trunkHeight);
+                            
+                            // Drooping canopy
+                            ctx.fillStyle = '#228B22';
+                            ctx.beginPath();
+                            ctx.ellipse(treeX, treeY - trunkHeight + 10, canopyRadius * 1.2, canopyRadius * 0.8, 0, 0, Math.PI * 2);
+                            ctx.fill();
+                            
+                            // Drooping branches
+                            ctx.strokeStyle = '#32CD32';
+                            ctx.lineWidth = 2;
+                            for (let branch = 0; branch < 8; branch++) {
+                                const branchX = treeX + (branch - 4) * 8;
+                                const branchLength = 20 + Math.random() * 15;
+                                ctx.beginPath();
+                                ctx.moveTo(branchX, treeY - trunkHeight + 10);
+                                ctx.quadraticCurveTo(branchX + 5, treeY - trunkHeight + 25, branchX, treeY - trunkHeight + branchLength);
+                                ctx.stroke();
+                            }
+                            break;
+                    }
                     
-                    // Tree shadow on ground
-                    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
-                    ctx.ellipse(treeX + 15, screenTreeY, 25, 8, 0, 0, Math.PI * 2);
-                    ctx.fill();
+                    // Add some small branches
+                    if (treeType !== 1) { // Not for pine trees
+                        ctx.strokeStyle = '#8B4513';
+                        ctx.lineWidth = 3;
+                        for (let branch = 0; branch < 3; branch++) {
+                            const branchAngle = (branch * Math.PI * 2) / 3;
+                            const branchLength = 15 * treeSize;
+                            const startX = treeX + Math.cos(branchAngle) * 5;
+                            const startY = treeY - trunkHeight + 20;
+                            const endX = startX + Math.cos(branchAngle) * branchLength;
+                            const endY = startY + Math.sin(branchAngle) * branchLength * 0.5;
+                            
+                            ctx.beginPath();
+                            ctx.moveTo(startX, startY);
+                            ctx.lineTo(endX, endY);
+                            ctx.stroke();
+                        }
+                    }
                 }
             }
             
@@ -2967,37 +3171,146 @@
                 
                 if (screenX > -platform.width && screenX < canvas.width + platform.width) {
                     if (platform.type === 'ground') {
-                        // Draw ground with dirt texture
+                        // Draw ground base
                         ctx.fillStyle = '#8B4513';
                         ctx.fillRect(screenX, screenY, platform.width, platform.height);
                         
-                        // Add grass on top
+                        // Add dirt texture with black dots (static pattern)
+                        ctx.fillStyle = '#000000';
+                        for (let x = screenX; x < screenX + platform.width; x += 6) {
+                            for (let y = screenY + 3; y < screenY + platform.height; y += 5) {
+                                // Use position-based pattern instead of random
+                                if ((x + y) % 12 < 5) {
+                                    ctx.beginPath();
+                                    ctx.arc(x + ((x + y) % 5), y + ((x + y) % 4), 0.8 + ((x + y) % 3) * 0.3, 0, Math.PI * 2);
+                                    ctx.fill();
+                                }
+                            }
+                        }
+                        
+                        // Add brown dirt texture (static pattern)
+                        ctx.fillStyle = '#654321';
+                        for (let x = screenX; x < screenX + platform.width; x += 8) {
+                            for (let y = screenY + 5; y < screenY + platform.height; y += 6) {
+                                // Use position-based pattern instead of random
+                                if ((x + y) % 15 < 4) {
+                                    ctx.beginPath();
+                                    ctx.arc(x + ((x + y) % 6), y + ((x + y) % 4), 1, 0, Math.PI * 2);
+                                    ctx.fill();
+                                }
+                            }
+                        }
+                        
+                        // Add small rocks (static pattern)
+                        ctx.fillStyle = '#5D4037';
+                        for (let x = screenX; x < screenX + platform.width; x += 15) {
+                            // Use position-based pattern instead of random
+                            if ((x + screenX) % 75 < 15) {
+                                const rockX = x + ((x + screenX) % 10);
+                                const rockY = screenY + 8 + ((x + screenX) % 15);
+                                ctx.beginPath();
+                                ctx.arc(rockX, rockY, 1.5, 0, Math.PI * 2);
+                                ctx.fill();
+                            }
+                        }
+                        
+                        // Add grass layer on top
                         ctx.fillStyle = '#228B22';
                         ctx.fillRect(screenX, screenY - 8, platform.width, 8);
                         
-                        // Add some grass details
-                        ctx.fillStyle = '#32CD32';
-                        for (let i = 0; i < platform.width; i += 15) {
-                            ctx.fillRect(screenX + i, screenY - 12, 3, 8);
-                            ctx.fillRect(screenX + i + 5, screenY - 10, 2, 6);
-                            ctx.fillRect(screenX + i + 10, screenY - 11, 2, 7);
+                        // Add taller and more varied grass lines (static)
+                        ctx.strokeStyle = '#32CD32';
+                        ctx.lineWidth = 1;
+                        for (let x = screenX; x < screenX + platform.width; x += 2) {
+                            const grassX = x + (x % 8) * 0.3; // More variation in position
+                            const grassHeight = 5 + (x % 8); // Taller grass with more height variation
+                            ctx.beginPath();
+                            ctx.moveTo(grassX, screenY);
+                            ctx.lineTo(grassX, screenY - grassHeight);
+                            ctx.stroke();
                         }
                         
-                        // Add dirt pattern
-                        ctx.fillStyle = '#654321';
-                        for (let i = 0; i < platform.width; i += 20) {
-                            for (let j = 10; j < platform.height; j += 15) {
-                                ctx.fillRect(screenX + i, screenY + j, 8, 8);
+                        // Add different grass types
+                        ctx.strokeStyle = '#228B22';
+                        ctx.lineWidth = 1.5;
+                        for (let x = screenX; x < screenX + platform.width; x += 5) {
+                            if ((x + screenX) % 15 === 0) {
+                                const grassX = x + 2;
+                                const grassHeight = 8 + (x % 6);
+                                ctx.beginPath();
+                                ctx.moveTo(grassX, screenY);
+                                ctx.lineTo(grassX, screenY - grassHeight);
+                                ctx.stroke();
                             }
                         }
+                        
+                        // Add thick grass blades
+                        ctx.strokeStyle = '#2E7D32';
+                        ctx.lineWidth = 2;
+                        for (let x = screenX; x < screenX + platform.width; x += 8) {
+                            if ((x + screenX) % 24 === 0) {
+                                const grassX = x + 3;
+                                const grassHeight = 6 + (x % 5);
+                                ctx.beginPath();
+                                ctx.moveTo(grassX, screenY);
+                                ctx.lineTo(grassX, screenY - grassHeight);
+                                ctx.stroke();
+                            }
+                        }
+                        
+                        // Add occasional small flowers (static positions)
+                        ctx.fillStyle = '#FFD700';
+                        for (let x = screenX; x < screenX + platform.width; x += 40) {
+                            if ((x + screenX) % 80 === 0) { // Static pattern
+                                ctx.beginPath();
+                                ctx.arc(x + 10, screenY - 3, 1, 0, Math.PI * 2);
+                                ctx.fill();
+                            }
+                        }
+                        
+                        // Add red flowers (static positions)
+                        ctx.fillStyle = '#FF6B6B';
+                        for (let x = screenX; x < screenX + platform.width; x += 60) {
+                            if ((x + screenX) % 120 === 0) { // Static pattern
+                                ctx.beginPath();
+                                ctx.arc(x + 20, screenY - 2, 0.8, 0, Math.PI * 2);
+                                ctx.fill();
+                            }
+                        }
+                        
                     } else {
                         // Floating platform
                         ctx.fillStyle = '#8B4513';
                         ctx.fillRect(screenX, screenY, platform.width, platform.height);
                         
+                        // Add dirt texture with dots for floating platforms too (static pattern)
+                        ctx.fillStyle = '#654321';
+                        for (let x = screenX; x < screenX + platform.width; x += 6) {
+                            for (let y = screenY + 3; y < screenY + platform.height; y += 5) {
+                                // Use position-based pattern instead of random
+                                if ((x + y) % 20 < 4) {
+                                    ctx.beginPath();
+                                    ctx.arc(x + ((x + y) % 4), y + ((x + y) % 3), 0.8, 0, Math.PI * 2);
+                                    ctx.fill();
+                                }
+                            }
+                        }
+                        
                         // Add grass on top
                         ctx.fillStyle = '#228B22';
                         ctx.fillRect(screenX, screenY - 5, platform.width, 5);
+                        
+                        // Add simple grass lines for floating platforms (static)
+                        ctx.strokeStyle = '#32CD32';
+                        ctx.lineWidth = 1;
+                        for (let x = screenX; x < screenX + platform.width; x += 4) {
+                            const grassX = x + (x % 5) * 0.3; // Slight variation
+                            const grassHeight = 2 + (x % 3); // Height variation
+                            ctx.beginPath();
+                            ctx.moveTo(grassX, screenY);
+                            ctx.lineTo(grassX, screenY - grassHeight);
+                            ctx.stroke();
+                        }
                         
                         // Platform border
                         ctx.strokeStyle = '#654321';
@@ -3029,51 +3342,96 @@
                 // Update timers
                 enemy.moveTimer++;
                 
-                // Random movement pattern - sometimes pause, sometimes move
-                if (enemy.isMoving) {
-                    // Move enemy with smooth random variation and sinusoidal speed changes
-                    const baseSpeed = enemy.velocityX * enemy.randomFactor;
-                    const speedVariation = 0.8 + Math.sin(enemy.moveTimer * 0.05) * 0.2;
-                    const currentSpeed = baseSpeed * speedVariation;
-                    enemy.x += currentSpeed * enemy.direction;
+                // Calculate distance to player
+                const distanceToPlayer = Math.abs(enemy.x - player.x);
+                const playerInRange = distanceToPlayer < 200; // Detection range
+                
+                // Goblin and Orc follow player behavior
+                if ((enemy.type === 'goblin' || enemy.type === 'orc') && playerInRange) {
+                    // Follow player with increased speed
+                    const followSpeed = enemy.type === 'orc' ? 1.2 : 0.8; // Orc faster than goblin
                     
-                    // Randomly pause movement (less frequent for more fluid movement)
-                    if (Math.random() < 0.005) {
-                        enemy.isMoving = false;
-                        enemy.pauseTimer = 30 + Math.random() * 90; // Pause for 0.5-1.5 seconds
+                    if (player.x > enemy.x) {
+                        enemy.direction = 1; // Move right towards player
+                        enemy.x += followSpeed;
+                    } else {
+                        enemy.direction = -1; // Move left towards player
+                        enemy.x -= followSpeed;
                     }
+                    
+                    enemy.isMoving = true;
                 } else {
-                    // Paused - count down pause timer
-                    enemy.pauseTimer--;
-                    if (enemy.pauseTimer <= 0) {
-                        enemy.isMoving = true;
-                        // Sometimes change direction when resuming movement
-                        if (Math.random() < 0.3) {
-                            enemy.direction *= -1;
+                    // Normal movement pattern for slimes, wolves, or when player is far
+                    if (enemy.isMoving) {
+                        // Move enemy with smooth random variation and sinusoidal speed changes
+                        let baseSpeed = enemy.velocityX * enemy.randomFactor;
+                        
+                        // Increase speed for goblin and orc
+                        if (enemy.type === 'goblin') baseSpeed *= 1.3;
+                        if (enemy.type === 'orc') baseSpeed *= 1.5;
+                        
+                        const speedVariation = 0.8 + Math.sin(enemy.moveTimer * 0.05) * 0.2;
+                        const currentSpeed = baseSpeed * speedVariation;
+                        enemy.x += currentSpeed * enemy.direction;
+                        
+                        // Randomly pause movement (less frequent for more fluid movement)
+                        if (Math.random() < 0.005) {
+                            enemy.isMoving = false;
+                            enemy.pauseTimer = 30 + Math.random() * 90; // Pause for 0.5-1.5 seconds
+                        }
+                    } else {
+                        // Paused - count down pause timer
+                        enemy.pauseTimer--;
+                        if (enemy.pauseTimer <= 0) {
+                            enemy.isMoving = true;
+                            // Sometimes change direction when resuming movement
+                            if (Math.random() < 0.3) {
+                                enemy.direction *= -1;
+                            }
                         }
                     }
                 }
                 
                 // Check if enemy should turn around (at platform edge or wall)
                 let onPlatform = false;
-                for (let platform of platforms) {
-                    if (platform.type === 'ground' && 
-                        enemy.x + enemy.width > platform.x && 
-                        enemy.x < platform.x + platform.width &&
-                        Math.abs(enemy.y + enemy.height - platform.y) < 5) {
-                        onPlatform = true;
-                        break;
+                
+                // Check if enemy is still on its designated platform
+                if (enemy.platformBounds) {
+                    if (enemy.x <= enemy.platformBounds.left || 
+                        enemy.x + enemy.width >= enemy.platformBounds.right) {
+                        enemy.direction *= -1;
+                        enemy.isMoving = true;
+                        // Keep enemy within platform bounds
+                        if (enemy.x <= enemy.platformBounds.left) {
+                            enemy.x = enemy.platformBounds.left + 1;
+                        }
+                        if (enemy.x + enemy.width >= enemy.platformBounds.right) {
+                            enemy.x = enemy.platformBounds.right - enemy.width - 1;
+                        }
+                    }
+                } else {
+                    // Fallback for enemies without platform bounds
+                    for (let platform of platforms) {
+                        if (platform.type === 'ground' && 
+                            enemy.x + enemy.width > platform.x && 
+                            enemy.x < platform.x + platform.width &&
+                            Math.abs(enemy.y + enemy.height - platform.y) < 5) {
+                            onPlatform = true;
+                            break;
+                        }
+                    }
+                    
+                    // Turn around if at edge or hit wall (but not when following player)
+                    if (!playerInRange || enemy.type === 'slime' || enemy.type === 'wolf') {
+                        if (!onPlatform || enemy.x <= 0 || enemy.x >= levelWidth - enemy.width) {
+                            enemy.direction *= -1;
+                            enemy.isMoving = true; // Resume movement when hitting edge
+                        }
                     }
                 }
                 
-                // Turn around if at edge or hit wall
-                if (!onPlatform || enemy.x <= 0 || enemy.x >= levelWidth - enemy.width) {
-                    enemy.direction *= -1;
-                    enemy.isMoving = true; // Resume movement when hitting edge
-                }
-                
-                // Occasionally change direction for more random behavior
-                if (Math.random() < 0.002) {
+                // Occasionally change direction for more random behavior (not when following)
+                if (!playerInRange && Math.random() < 0.002) {
                     enemy.direction *= -1;
                     enemy.randomFactor = Math.random() * 0.2 + 0.8; // New random speed
                 }
@@ -3172,52 +3530,66 @@
         }
         
         function drawWolf(screenX, screenY, enemy) {
-            // Wolf body
+            // Wolf body (lebih besar)
             ctx.fillStyle = '#696969'; // Dark gray
-            ctx.fillRect(screenX + 4, screenY + enemy.height - 16, enemy.width - 8, 12);
+            ctx.fillRect(screenX + 6, screenY + enemy.height - 24, enemy.width - 12, 18);
             
-            // Wolf head
+            // Wolf head (lebih besar)
             ctx.fillStyle = '#808080'; // Gray
-            ctx.fillRect(screenX + enemy.width - 12, screenY + enemy.height - 20, 10, 8);
+            ctx.fillRect(screenX + enemy.width - 18, screenY + enemy.height - 30, 15, 12);
             
-            // Wolf ears
+            // Wolf ears (lebih besar)
             ctx.fillStyle = '#696969';
             ctx.beginPath();
+            ctx.moveTo(screenX + enemy.width - 15, screenY + enemy.height - 30);
+            ctx.lineTo(screenX + enemy.width - 12, screenY + enemy.height - 36);
+            ctx.lineTo(screenX + enemy.width - 9, screenY + enemy.height - 30);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.moveTo(screenX + enemy.width - 9, screenY + enemy.height - 30);
+            ctx.lineTo(screenX + enemy.width - 6, screenY + enemy.height - 36);
+            ctx.lineTo(screenX + enemy.width - 3, screenY + enemy.height - 30);
+            ctx.fill();
+            
+            // Wolf legs (lebih besar)
+            ctx.fillStyle = '#696969';
+            ctx.fillRect(screenX + 9, screenY + enemy.height - 12, 5, 12);
+            ctx.fillRect(screenX + 18, screenY + enemy.height - 12, 5, 12);
+            ctx.fillRect(screenX + enemy.width - 18, screenY + enemy.height - 12, 5, 12);
+            ctx.fillRect(screenX + enemy.width - 9, screenY + enemy.height - 12, 5, 12);
+            
+            // Wolf tail (lebih besar)
+            ctx.fillStyle = '#808080';
+            ctx.fillRect(screenX + 3, screenY + enemy.height - 21, 9, 4);
+            
+            // Wolf eyes (lebih besar)
+            ctx.fillStyle = '#FF0000'; // Red eyes
+            ctx.beginPath();
+            ctx.arc(screenX + enemy.width - 12, screenY + enemy.height - 24, 1.5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(screenX + enemy.width - 7, screenY + enemy.height - 24, 1.5, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Wolf nose (lebih besar)
+            ctx.fillStyle = '#000000';
+            ctx.beginPath();
+            ctx.arc(screenX + enemy.width - 3, screenY + enemy.height - 21, 0.8, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Wolf fangs
+            ctx.fillStyle = '#FFFFFF';
+            ctx.beginPath();
             ctx.moveTo(screenX + enemy.width - 10, screenY + enemy.height - 20);
-            ctx.lineTo(screenX + enemy.width - 8, screenY + enemy.height - 24);
-            ctx.lineTo(screenX + enemy.width - 6, screenY + enemy.height - 20);
+            ctx.lineTo(screenX + enemy.width - 9, screenY + enemy.height - 17);
+            ctx.lineTo(screenX + enemy.width - 8, screenY + enemy.height - 20);
             ctx.fill();
             
             ctx.beginPath();
             ctx.moveTo(screenX + enemy.width - 6, screenY + enemy.height - 20);
-            ctx.lineTo(screenX + enemy.width - 4, screenY + enemy.height - 24);
-            ctx.lineTo(screenX + enemy.width - 2, screenY + enemy.height - 20);
-            ctx.fill();
-            
-            // Wolf legs
-            ctx.fillStyle = '#696969';
-            ctx.fillRect(screenX + 6, screenY + enemy.height - 8, 3, 8);
-            ctx.fillRect(screenX + 12, screenY + enemy.height - 8, 3, 8);
-            ctx.fillRect(screenX + enemy.width - 12, screenY + enemy.height - 8, 3, 8);
-            ctx.fillRect(screenX + enemy.width - 6, screenY + enemy.height - 8, 3, 8);
-            
-            // Wolf tail
-            ctx.fillStyle = '#808080';
-            ctx.fillRect(screenX + 2, screenY + enemy.height - 14, 6, 3);
-            
-            // Wolf eyes
-            ctx.fillStyle = '#FF0000'; // Red eyes
-            ctx.beginPath();
-            ctx.arc(screenX + enemy.width - 8, screenY + enemy.height - 16, 1, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.beginPath();
-            ctx.arc(screenX + enemy.width - 5, screenY + enemy.height - 16, 1, 0, Math.PI * 2);
-            ctx.fill();
-            
-            // Wolf nose
-            ctx.fillStyle = '#000000';
-            ctx.beginPath();
-            ctx.arc(screenX + enemy.width - 2, screenY + enemy.height - 14, 0.5, 0, Math.PI * 2);
+            ctx.lineTo(screenX + enemy.width - 5, screenY + enemy.height - 17);
+            ctx.lineTo(screenX + enemy.width - 4, screenY + enemy.height - 20);
             ctx.fill();
         }
         
@@ -3395,53 +3767,53 @@
             // Draw player character based on role
             if (selectedRoleName === 'Raja Thirdia') {
                 // Draw King character
-                ctx.fillStyle = '#7c2d12'; // Royal robe color
+                ctx.fillStyle = '#7c2d12';
                 ctx.fillRect(screenX, screenY, player.width, player.height);
                 
                 // Add crown
                 ctx.fillStyle = '#FFD700';
-                ctx.fillRect(screenX + 5, screenY - 5, 30, 8);
+                ctx.fillRect(screenX + 5, screenY - 5, player.width * 0.75, 8);
                 
                 // Crown points
                 ctx.fillRect(screenX + 8, screenY - 10, 4, 5);
-                ctx.fillRect(screenX + 18, screenY - 12, 4, 7);
-                ctx.fillRect(screenX + 28, screenY - 10, 4, 5);
+                ctx.fillRect(screenX + player.width * 0.5, screenY - 12, 4, 7);
+                ctx.fillRect(screenX + player.width * 0.75, screenY - 10, 4, 5);
                 
                 // Face
-                ctx.fillStyle = '#FFE4B5';
-                ctx.fillRect(screenX + 5, screenY + 5, 30, 20);
+                ctx.fillStyle = '#fdbcbc';
+                ctx.fillRect(screenX + 5, screenY + 5, player.width * 0.75, player.height * 0.6);
                 
                 // Beard
                 ctx.fillStyle = '#E6E6E6';
-                ctx.fillRect(screenX + 8, screenY + 20, 24, 8);
+                ctx.fillRect(screenX + 8, screenY + player.height * 0.6, player.width * 0.6, player.height * 0.25);
                 
                 // Eyes
                 ctx.fillStyle = '#000000';
                 ctx.fillRect(screenX + 10, screenY + 10, 3, 3);
-                ctx.fillRect(screenX + 22, screenY + 10, 3, 3);
+                ctx.fillRect(screenX + player.width * 0.6, screenY + 10, 3, 3);
                 
                 // Royal emblem
                 ctx.fillStyle = '#FFD700';
-                ctx.fillRect(screenX + 17, screenY + 30, 6, 6);
+                ctx.fillRect(screenX + player.width * 0.4, screenY + player.height * 0.8, 6, 6);
                 
             } else {
                 // Draw regular character
-                ctx.fillStyle = '#4169E1';
+                ctx.fillStyle = '#4a90e2';
                 ctx.fillRect(screenX, screenY, player.width, player.height);
                 
                 // Add simple face
-                ctx.fillStyle = '#FFE4B5';
-                ctx.fillRect(screenX + 5, screenY + 5, 30, 20);
+                ctx.fillStyle = '#fdbcbc';
+                ctx.fillRect(screenX + 5, screenY + 5, player.width * 0.75, player.height * 0.6);
                 
                 // Eyes
                 ctx.fillStyle = '#000000';
                 ctx.fillRect(screenX + 10, screenY + 10, 3, 3);
-                ctx.fillRect(screenX + 22, screenY + 10, 3, 3);
+                ctx.fillRect(screenX + player.width * 0.6, screenY + 10, 3, 3);
                 
                 // Add role indicator
                 ctx.fillStyle = '#FFD700';
                 ctx.font = '12px Arial';
-                ctx.fillText(selectedRoleName.charAt(0), screenX + 15, screenY - 5);
+                ctx.fillText(selectedRoleName.charAt(0), screenX + player.width * 0.4, screenY - 5);
             }
         }
         
@@ -3478,17 +3850,22 @@
                 }
             });
             
-            // Obstacle collisions (holes)
-            obstacles.forEach(obstacle => {
-                if (obstacle.type === 'hole' &&
-                    player.x < obstacle.x + obstacle.width &&
-                    player.x + player.width > obstacle.x &&
-                    player.y + player.height > obstacle.y) {
-                    
-                    // Player fell into hole
-                    loseLife();
+            // Check if player fell into hole (below ground level)
+            let playerOnGround = false;
+            for (let platform of platforms) {
+                if (platform.type === 'ground' && 
+                    player.x + player.width > platform.x && 
+                    player.x < platform.x + platform.width &&
+                    Math.abs(player.y + player.height - platform.y) < 10) {
+                    playerOnGround = true;
+                    break;
                 }
-            });
+            }
+            
+            // If player is below ground level and not on any ground platform, they fell into a hole
+            if (player.y + player.height > groundLevel + 20 && !playerOnGround) {
+                loseLife();
+            }
             
             // Fall off screen
             if (player.y > canvas.height + 100) {
@@ -3517,7 +3894,7 @@
                         // Visual effect (could add particle effect here)
                         console.log('Enemy defeated!');
                     } else {
-                        // Player touched enemy from side - lose life
+                        // Player touched enemy from side - lose life immediately
                         loseLife();
                     }
                 }
@@ -3533,17 +3910,32 @@
         }
         
         function loseLife() {
+            // Check if player is King (infinite lives)
+            if (selectedRoleName === 'Raja Thirdia') {
+                // King has infinite lives - just respawn without losing life
+                player.x = Math.max(100, player.x - 200);
+                player.y = groundLevel - player.height;
+                player.velocityX = 0;
+                player.velocityY = 0;
+                player.onGround = true;
+                
+                // Show special King message
+                console.log('👑 Raja Thirdia memiliki nyawa tak terbatas!');
+                return;
+            }
+            
             player.lives--;
             updateLivesDisplay();
             
             if (player.lives <= 0) {
                 gameOver();
             } else {
-                // Respawn player
+                // Respawn player immediately at safe position
                 player.x = Math.max(100, player.x - 200);
-                player.y = 300;
+                player.y = groundLevel - player.height;
                 player.velocityX = 0;
                 player.velocityY = 0;
+                player.onGround = true;
             }
         }
         
@@ -3561,7 +3953,10 @@
             // Hide game over modal
             document.getElementById('gameOverModal').classList.add('hidden');
             
-            // Restart current level (not from beginning)
+            // Reset to level 1 when game over
+            currentLevel = 1;
+            
+            // Restart from level 1
             initializePlatformerGame();
         }
         
@@ -3642,10 +4037,18 @@
         }
         
         function updateLivesDisplay() {
-            document.getElementById('livesCounter').textContent = player.lives;
-            // Update the total lives display as well
+            const livesCounter = document.getElementById('livesCounter');
             const livesDisplay = document.getElementById('livesDisplay');
-            livesDisplay.innerHTML = `❤️ Nyawa: <span id="livesCounter">${player.lives}</span>/5`;
+            
+            if (selectedRoleName === 'Raja Thirdia') {
+                // King has infinite lives
+                livesCounter.textContent = '∞';
+                livesDisplay.innerHTML = `👑 Nyawa: <span id="livesCounter">∞</span> (Tak Terbatas)`;
+            } else {
+                // Regular player
+                livesCounter.textContent = player.lives;
+                livesDisplay.innerHTML = `❤️ Nyawa: <span id="livesCounter">${player.lives}</span>/5`;
+            }
         }
         
         function updateScoreDisplay() {
@@ -3753,15 +4156,15 @@
                 // Close admin access
                 closeAdminAccess();
                 
-                // Skip directly to platformer game
-                alert('👑 Selamat datang, Yang Mulia Raja Thirdia! Akses admin berhasil. Melewati tutorial dan langsung ke permainan platformer!');
+                // Show level selector for King
+                alert('👑 Selamat datang, Yang Mulia Raja Thirdia! Akses admin berhasil. Silakan pilih level yang ingin dimainkan!');
                 
                 // Send admin access log to Google Sheets
                 sendAdminAccessLog();
                 
-                // Start platformer game directly
+                // Show level selector
                 setTimeout(() => {
-                    startPlatformerGame();
+                    showLevelSelector();
                 }, 1000);
                 
             } else {
@@ -3775,6 +4178,64 @@
                     document.getElementById('adminCode').placeholder = 'Kode Admin...';
                 }, 2000);
             }
+        }
+        
+        // Level Selector Functions
+        let selectedLevel = 1;
+        
+        function showLevelSelector() {
+            // Hide all other sections
+            document.getElementById('characterCreation').classList.add('hidden');
+            document.getElementById('roleSelection').classList.add('hidden');
+            document.getElementById('kingdomExploration').classList.add('hidden');
+            document.getElementById('successModal').classList.add('hidden');
+            document.getElementById('questModal').classList.add('hidden');
+            document.getElementById('adminAccess').classList.add('hidden');
+            
+            // Show level selector
+            document.getElementById('levelSelector').classList.remove('hidden');
+        }
+        
+        function selectLevel(level) {
+            selectedLevel = level;
+            
+            // Remove previous selection
+            document.querySelectorAll('.level-card').forEach(card => {
+                card.classList.remove('ring-4', 'ring-yellow-400', 'scale-110');
+            });
+            
+            // Add selection to current card
+            const selectedCard = document.querySelector(`[onclick="selectLevel(${level})"]`);
+            if (selectedCard) {
+                selectedCard.classList.add('ring-4', 'ring-yellow-400', 'scale-110');
+            }
+            
+            // Show selected level info
+            const levelNames = {
+                1: 'Level 1 - Morning (Slime)',
+                2: 'Level 2 - Day (Slime)',
+                3: 'Level 3 - Afternoon (Slime)',
+                4: 'Level 4 - Evening (Wolf)',
+                5: 'Level 5 - Dusk (Wolf)',
+                6: 'Level 6 - Night (Wolf)',
+                7: 'Level 7 - Midnight (Goblin)',
+                8: 'Level 8 - Late Night (Goblin)',
+                9: 'Level 9 - Dawn (Goblin)',
+                10: 'Level 10 - BOSS (Orc)'
+            };
+            
+            document.getElementById('selectedLevelName').textContent = levelNames[level];
+            document.getElementById('selectedLevelDisplay').classList.remove('hidden');
+            document.getElementById('startSelectedLevelBtn').classList.remove('hidden');
+        }
+        
+        function startSelectedLevel() {
+            // Set current level to selected level
+            currentLevel = selectedLevel;
+            
+            // Hide level selector and start platformer game
+            document.getElementById('levelSelector').classList.add('hidden');
+            startPlatformerGame();
         }
         
         function createKingCharacterSVG() {
@@ -4037,5 +4498,5 @@
             });
         }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f4dbea56c444c1',t:'MTc1NTIyMDcxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f5266d23978104',t:'MTc1NTIyMzc2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

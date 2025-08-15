@@ -302,21 +302,17 @@
 </head>
 <body
 
-<audio id="bgMusic" autoplay loop muted>
+<audio id="bgMusic" loop>
     <source src="https://github.com/aprelryu21/thirdia-chronicles-games/blob/main/ost.mp3?raw=true" type="audio/mpeg">
 </audio>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const music = document.getElementById('bgMusic');
-    music.volume = 0.5;
+const music = document.getElementById('bgMusic');
+music.volume = 0.5;
 
-    // Unmute saat user pertama kali klik di halaman
-    document.body.addEventListener('click', function() {
-        music.muted = false;
-        music.play();
-    }, { once: true });
-});
+function startMusic() {
+    music.play().catch(err => console.log("Autoplay diblokir:", err));
+}
 </script>
 
     
@@ -406,10 +402,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     
                     <!-- Continue Button -->
-                    <button 
-                        type="submit" 
-                        class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-lg sm:text-xl font-bold text-white transition-all transform hover:scale-105 shadow-lg"
-                    >
+                        <button 
+                            type="submit" 
+                            onclick="startMusic()" 
+                            class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-lg sm:text-xl font-bold text-white transition-all transform hover:scale-105 shadow-lg"
+                        >
                         🚀 LANJUT KE PEMILIHAN ROLE
                     </button>
                     
@@ -4534,6 +4531,7 @@ function skipTutorial(){
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f5266d23978104',t:'MTc1NTIyMzc2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
 
 
